@@ -3,8 +3,18 @@
 {% block content %}
 
 <div class="container text-center mt-5">
+    <img src="/static/jinja-flask-2.png" class="w-25 mb-5" alt="Jinja Flask">
     <h1>{{ title }}</h1>
     <p>{{ description }}</p>
+
+    {% if session.logged_in %}
+    <p>Welcome, {{ session.username }}!</p>
+    <a href="/logout">Logout</a>
+    {% else %}
+    <p>Not logged in.</p>
+    <a href="/login" class="btn btn-outline-primary btn-lg btn-sm" role="button" aria-pressed="true">Please Login</a>
+    {% endif %}
+
 </div>
 
 {% endblock %}
