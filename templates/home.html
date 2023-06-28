@@ -9,10 +9,10 @@
 
     {% if session.logged_in %}
     <p>Welcome, {{ session.username }}!</p>
-    <a href="/logout">Logout</a>
+    <a href="/logout" class="btn btn-outline-dark btn-lg btn-sm role=" button" aria-pressed="true"">Logout</a>
     {% else %}
     <p>Not logged in.</p>
-    <a href="/login" class="btn btn-outline-primary btn-lg btn-sm" role="button" aria-pressed="true">Please Login</a>
+    <a href=" /login" class="btn btn-outline-dark btn-lg btn-sm" role="button" aria-pressed="true">Please Login</a>
     {% endif %}
 
 </div>
