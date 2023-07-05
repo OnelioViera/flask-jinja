@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% include "nav.html" %}
+{% block content %}
+<!-- Shop Cart Modal-->
+{% include "modal.html" %}
+<div class="container text-center my-5">
+    <h1>{{ title }}</h1>
+    <p class="h5 mb-4">{{ description }}</p>
+    <div class="row fluid d-flex justify-content-center align-items-center mt-5">
+        <div class="col-md-10">
+            <div class="card text-center mb-5">
+                <div class="card-body pb-5">
+                    <p class="text-center m-4">Create Python apps from scratch using Flask to build<br> routes,
+                        serve
+                        assets, and build
+                        interactive user experiences.</p>
+                    <img src="/static/flask-a.png" class="w-75 mb-4" alt="flask code">
+
+                    <img src="/static/flask-b.png" class="w-75" alt="flask code">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

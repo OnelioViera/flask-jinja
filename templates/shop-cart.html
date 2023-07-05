@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% include "nav.html" %}
+{% block content %}
+
+</head>
+
+<body>
+
+    <div class="container text-center my-5">
+        <img src="/static/jinja-flask-4.png" class="" alt="">
+        <h1 class="display-4 mt-2">{{ title }}</h1>
+
+    </div>
+    <div class="row fluid d-flex justify-content-center align-items-center mt-5">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <ul>
+
+                        <li>Login Form App <form method="POST" action="{{ url_for('add_to_cart') }}"><input
+                                    type="hidden" name="item" value="Login Form App"><input
+                                    class="btn btn-success btn-sm mt-2" type="submit" value="Add to Cart"></form>
+                        </li>
+                        <li>Registration Form App <form method="POST" action="{{ url_for('add_to_cart') }}"><input
+                                    type="hidden" name="item" value="Registration Form App"><input
+                                    class="btn btn-success btn-sm mt-2" type="submit" value="Add to Cart"></form>
+                        </li>
+                        <li>Contact Form App <form method="POST" action="{{ url_for('add_to_cart') }}"><input
+                                    type="hidden" name="item" value="Contact Form App"><input
+                                    class="btn btn-success btn-sm mt-2" type="submit" value="Add to Cart"></form>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Shop Cart Modal-->
+                {% include "modal.html" %}
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+{% endblock %}
