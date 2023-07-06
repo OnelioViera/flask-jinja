@@ -38,7 +38,7 @@ def register():
         else:
             # Store the user details in a dictionary or database
             users[username] = password
-            flash("Registration successful! Please log in.")
+            flash("Registration successful! Please login.")
             return redirect("/login")
 
     return render_template("register.html")
@@ -67,7 +67,7 @@ def login():
 @app.route("/logout")
 def logout():
     session.clear()
-    flash("Logged out successfully!")
+    flash("Logged out successfully! Please login.")
     return redirect("/")
 
 

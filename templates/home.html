@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-
 {% block content %}
 
 <div class="container text-center mt-5">
@@ -8,7 +7,7 @@
     <p>{{ description }}</p>
 
     {% if session.logged_in %}
-    <p>Welcome, {{ session.username }}!</p>
+    <p class="h5 mb-4">Welcome, {{ session.username }}!</p>
     <a href="/logout" class="btn btn-outline-dark btn-lg btn-sm role=" button" aria-pressed="true"">Logout</a>
     {% else %}
     <p>Not logged in.</p>
